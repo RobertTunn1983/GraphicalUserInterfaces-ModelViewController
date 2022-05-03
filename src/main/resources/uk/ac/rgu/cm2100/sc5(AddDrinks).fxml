@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="662.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rgu.cm2100.Controller_5_AddDrinksPane">
+   <children>
+      <Button layoutX="16.0" layoutY="622.0" mnemonicParsing="false" onAction="#goToCreateOrder2" text="Back to Create Order" />
+      <Label layoutX="206.0" layoutY="14.0" text="Add Drinks" textFill="RED">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+
+      <ComboBox fx:id="drink1ComboBox" layoutX="380.0" layoutY="68.0" onAction="#drink1ComboBoxIsSelected" prefHeight="26.0" prefWidth="62.0" />
+      <ComboBox fx:id="drink2ComboBox" layoutX="380.0" layoutY="103.0" onAction="#drink2ComboBoxIsSelected" prefHeight="26.0" prefWidth="62.0" />
+      <ComboBox fx:id="drink3ComboBox" layoutX="380.0" layoutY="138.0" onAction="#drink3ComboBoxIsSelected" prefHeight="26.0" prefWidth="62.0" />
+      <ComboBox fx:id="drink4ComboBox" layoutX="380.0" layoutY="173.0" onAction="#drink4ComboBoxIsSelected" prefHeight="26.0" prefWidth="62.0" />
+      <ComboBox fx:id="drink5ComboBox" layoutX="380.0" layoutY="208.0" onAction="#drink5ComboBoxIsSelected" prefHeight="26.0" prefWidth="62.0" />
+      <ComboBox fx:id="drink6ComboBox" layoutX="380.0" layoutY="243.0" onAction="#drink6ComboBoxIsSelected" prefHeight="26.0" prefWidth="62.0" />
+      <ComboBox fx:id="drink7ComboBox" layoutX="380.0" layoutY="278.0" onAction="#drink7ComboBoxIsSelected" prefHeight="26.0" prefWidth="62.0" />
+
+
+      <Text fx:id="drink1Label" layoutX="175.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="drink1" />
+      <Text fx:id="drink2Label" layoutX="175.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="drink2" />
+      <Text fx:id="drink3Label" layoutX="175.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="drink3" />
+      <Text fx:id="drink4Label" layoutX="175.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="drink4" />
+      <Text fx:id="drink5Label" layoutX="175.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="drink5" />
+      <Text fx:id="drink6Label" layoutX="175.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="drink6" />
+      <Text fx:id="drink7Label" layoutX="175.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="drink7" />
+
+      <TextArea fx:id="chosenDrinksDisplayArea" layoutX="18.0" layoutY="390.0" prefHeight="210.0" prefWidth="582.0" promptText="...Drinks to be added to order will appear here..." />
+
+      <Button layoutX="362.0" layoutY="339.0" mnemonicParsing="false" onAction="#sendDrinksToOrderScreen" text="Confirm Drinks and Add to Order" />
+      <Button layoutX="67.0" layoutY="339.0" mnemonicParsing="false" onAction="#generateDrinksOrder" text="Add Drinks to Provisional List" />
+      <Button layoutX="268.0" layoutY="339.0" mnemonicParsing="false" onAction="#clearList" text="Clear List" />
+      <Button layoutX="415.0" layoutY="622.0" mnemonicParsing="false" onAction="#goToMenuManager7" text="Add/Remove Drinks from Menu" />
+   </children>
+</AnchorPane>

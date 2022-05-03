@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="699.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rgu.cm2100.Controller_2_CreateOrderPane">
+   <children>
+      <Label layoutX="20.0" layoutY="14.0" text="Create New Order" textFill="RED">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Text layoutX="5.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="243.21093749999994">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="494.0" layoutY="652.0" mnemonicParsing="false" onAction="#goToWelcomeScreen" text="Go Back to Welcome Screen" />
+      <Button layoutX="19.0" layoutY="213.0" mnemonicParsing="false" onAction="#goToCreatePizzas3" prefHeight="26.0" prefWidth="120.0" text="Add Pizza(s)" />
+      <Button layoutX="19.0" layoutY="255.0" mnemonicParsing="false" onAction="#goToAddSides4" prefHeight="26.0" prefWidth="120.0" text="Add Side(s)" />
+      <Button layoutX="19.0" layoutY="296.0" mnemonicParsing="false" onAction="#goToAddDrinks5" prefHeight="26.0" prefWidth="120.0" text="Add Drink(s)" />
+      <Button layoutX="19.0" layoutY="446.0" mnemonicParsing="false" onAction="#addOrderToOrderArrayList" prefHeight="26.0" prefWidth="145.0" text="Add Order to List" />
+      <Text layoutX="360.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Progress Window" wrappingWidth="285.60003662109375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="orderProgressBox" layoutX="360.0" layoutY="98.0" prefHeight="468.0" prefWidth="311.0" promptText="..updates to info will appear here..." />
+      <Text layoutX="360.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK YOUR ORDER AS IT IS CREATED" wrappingWidth="264.314208984375">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IF ALL INFORMATION IN ORDER PROGRESS">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AS MANY TIMES AS REQUIRED">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Pizzas, Sides" wrappingWidth="285.60003662109375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and Drinks" wrappingWidth="285.60003662109375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WINDOW IS CORRECT, CLICK ADD">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDER TO LIST">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDER PIZZAS, SIDES AND DRINKS">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO DELETE ORDERS, ENTER ORDER MANAGER">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AND EDIT ORDER">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="completedOrderCountOutput" layoutX="19.0" layoutY="609.0" prefHeight="73.0" prefWidth="278.0" />
+      <Button layoutX="19.0" layoutY="557.0" mnemonicParsing="false" onAction="#goToOrderManager6" prefHeight="26.0" prefWidth="146.0" text="Go to Order Manager" />
+      <TextArea fx:id="errorBox2" layoutX="360.0" layoutY="582.0" prefHeight="54.0" prefWidth="311.0" />
+
+   </children>
+</AnchorPane>

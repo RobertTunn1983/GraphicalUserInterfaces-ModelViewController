@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rgu.cm2100.Controller_1_WelcomePane">
+   <children>
+      <Text fill="RED" layoutX="10.0" layoutY="59.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" text="Welcome to the Da Vinci Pizza Ordering System" textAlignment="CENTER" wrappingWidth="525.6000671386719">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Text>
+      <Button layoutX="208.0" layoutY="384.0" mnemonicParsing="false" onAction="#goToOrderManager6" text="Open Order Manager" />
+      <Button layoutX="208.0" layoutY="428.0" mnemonicParsing="false" onAction="#goToOrderManager7" text="Open Menu Manager" />
+      <Button fx:id="createOrderButton" layoutX="179.0" layoutY="218.0" mnemonicParsing="false" onAction="#goToCreateOrder2" prefHeight="94.0" prefWidth="186.0" text="Create Order">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Text layoutX="173.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Da Vinci Pizza, 42 Don Street, Old Aberdeen, Aberdeen, Scotland" textAlignment="CENTER" wrappingWidth="200.5367431640625">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

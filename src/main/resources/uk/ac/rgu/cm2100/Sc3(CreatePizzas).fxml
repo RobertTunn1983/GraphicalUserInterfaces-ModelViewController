@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="774.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rgu.cm2100.Controller_3_CreatePizzasPane">
+   <children>
+      <Label layoutX="15.0" layoutY="8.0" text="Add Pizzas" textFill="RED">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Text layoutX="18.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="15.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What size would you like?">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <Text layoutX="15.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your toppings:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="thinRadButton" layoutX="15.0" layoutY="176.0" mnemonicParsing="false" onAction="#chooseBaseType" text="Thin">
+         <toggleGroup>
+            <ToggleGroup fx:id="crustType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="mediumBaseRadButton" layoutX="120.0" layoutY="176.0" mnemonicParsing="false" onAction="#chooseBaseType" text="Medium" toggleGroup="$crustType" />
+      <RadioButton fx:id="deepRadButton" layoutX="225.0" layoutY="176.0" mnemonicParsing="false" onAction="#chooseBaseType" text="Deep" toggleGroup="$crustType" />
+      <RadioButton fx:id="smallRadButton" layoutX="15.0" layoutY="101.0" mnemonicParsing="false" onAction="#chooseSize" text="Small">
+         <toggleGroup>
+            <ToggleGroup fx:id="pizzaSizeRadio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="mediumSizeRadButton" layoutX="120.0" layoutY="101.0" mnemonicParsing="false" onAction="#chooseSize" text="Medium" toggleGroup="$pizzaSizeRadio" />
+      <RadioButton fx:id="largeRadButton" layoutX="225.0" layoutY="101.0" mnemonicParsing="false" onAction="#chooseSize" text="Large" toggleGroup="$pizzaSizeRadio" />
+      <RadioButton fx:id="hugeRadButton" layoutX="330.0" layoutY="101.0" mnemonicParsing="false" onAction="#chooseSize" text="Huge" toggleGroup="$pizzaSizeRadio" />
+      <RadioButton fx:id="stuffedCrustRadButton" layoutX="330.0" layoutY="176.0" mnemonicParsing="false" onAction="#chooseBaseType" text="Cheese and Sauce Stuffed" toggleGroup="$crustType" />
+      <Text layoutX="15.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What type of base would you like?">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#0030ff" layoutX="585.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIZE:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text fill="#0030ff" layoutX="585.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TYPE OF BASE:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Label fx:id="pizzaSizeLabel" layoutX="585.0" layoutY="98.0" text="...pizza size...">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="pizzaBaseLabel" layoutX="585.0" layoutY="176.0" text="...base selection...">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="customToppingsFlag" layoutX="354.0" layoutY="366.0" />
+      <Button layoutX="657.0" layoutY="729.0" mnemonicParsing="false" onAction="#goToCreateOrder2" text="Back to Create Order" />
+      <ToggleButton fx:id="setTopping2Yes" layoutX="55.0" layoutY="290.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping2" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping2Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping2No" layoutX="112.0" layoutY="290.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping2" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping2Buttons" />
+      <ToggleButton fx:id="setTopping3Yes" layoutX="55.0" layoutY="327.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping3" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping3Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping3No" layoutX="112.0" layoutY="327.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping3" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping3Buttons" />
+      <ToggleButton fx:id="setTopping1Yes" layoutX="55.0" layoutY="254.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping1" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping1Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping1No" layoutX="112.0" layoutY="254.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping1" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping1Buttons" />
+      <ToggleButton fx:id="setTopping5Yes" layoutX="55.0" layoutY="399.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping5" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping5Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping5No" layoutX="112.0" layoutY="399.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping5" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping5Buttons" />
+      <ToggleButton fx:id="setTopping6Yes" layoutX="55.0" layoutY="436.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping6" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping6Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping6No" layoutX="112.0" layoutY="436.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping6" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping6Buttons" />
+      <ToggleButton fx:id="setTopping4Yes" layoutX="55.0" layoutY="363.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping4" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping4Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping4No" layoutX="112.0" layoutY="363.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping4" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping4Buttons" />
+      <ToggleButton fx:id="setTopping8Yes" layoutX="305.0" layoutY="290.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping8" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping8Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping8No" layoutX="362.0" layoutY="290.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping8" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping8Buttons" />
+      <ToggleButton fx:id="setTopping9Yes" layoutX="305.0" layoutY="327.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping9" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping9Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping9No" layoutX="362.0" layoutY="327.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping9" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping9Buttons" />
+      <ToggleButton fx:id="setTopping7Yes" layoutX="305.0" layoutY="254.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping7" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping7Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping7No" layoutX="362.0" layoutY="254.0" minWidth="27.0" mnemonicParsing="false" onAction="#addRemoveSetTopping7" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping7Buttons" />
+      <ToggleButton fx:id="setTopping11Yes" layoutX="305.0" layoutY="399.0" minWidth="27.0" mnemonicParsing="false" onAction="#SetTopping11" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping11Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping11No" layoutX="362.0" layoutY="399.0" minWidth="27.0" mnemonicParsing="false" onAction="#SetTopping11" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping11Buttons" />
+      <ToggleButton fx:id="setTopping12Yes" layoutX="305.0" layoutY="436.0" minWidth="27.0" mnemonicParsing="false" onAction="#SetTopping12" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping12Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping12No" layoutX="362.0" layoutY="436.0" minWidth="27.0" mnemonicParsing="false" onAction="#SetTopping12" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping12Buttons" />
+      <ToggleButton fx:id="setTopping10Yes" layoutX="305.0" layoutY="363.0" minWidth="27.0" mnemonicParsing="false" onAction="#SetTopping10" prefHeight="30.0" prefWidth="27.0" text="Y">
+         <toggleGroup>
+            <ToggleGroup fx:id="setTopping10Buttons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="setTopping10No" layoutX="362.0" layoutY="363.0" minWidth="27.0" mnemonicParsing="false" onAction="#SetTopping10" prefHeight="30.0" prefWidth="27.0" selected="true" text="N" toggleGroup="$setTopping10Buttons" />
+      <Text fill="#0030ff" layoutX="585.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOPPINGS:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="373.0" layoutY="729.0" mnemonicParsing="false" onAction="#addPizzaListToOrder" prefHeight="24.0" prefWidth="190.0" text="Confirm and Add Pizzas to Order" />
+      <TextArea fx:id="toppingsTextArea" layoutX="585.0" layoutY="249.0" prefHeight="391.0" prefWidth="200.0" />
+      <TextArea fx:id="pizzasListTextArea" layoutX="15.0" layoutY="526.0" prefHeight="112.0" prefWidth="548.0" />
+      <Button layoutX="426.0" layoutY="690.0" mnemonicParsing="false" onAction="#reset" text="Clear Current Pizza List" />
+      <Text fill="RED" layoutX="15.0" layoutY="709.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MADE A MISTAKE? CLEAR LIST AND START AGAIN ">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="15.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK SIZE, BASE, TOPPINGS THEN ADD PIZZA TO LIST">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="setToppingLabel1" layoutX="165.0" layoutY="261.0" text="topping1" />
+      <Label fx:id="setToppingLabel2" layoutX="165.0" layoutY="296.0" text="topping2" />
+      <Label fx:id="setToppingLabel3" layoutX="165.0" layoutY="333.0" text="topping3" />
+      <Label fx:id="setToppingLabel4" layoutX="165.0" layoutY="369.0" text="topping4" />
+      <Label fx:id="setToppingLabel5" layoutX="165.0" layoutY="405.0" text="topping5" />
+      <Label fx:id="setToppingLabel6" layoutX="165.0" layoutY="442.0" text="topping6" />
+      <Label fx:id="setToppingLabel7" layoutX="413.0" layoutY="261.0" text="topping7" />
+      <Label fx:id="setToppingLabel8" layoutX="413.0" layoutY="296.0" text="topping8" />
+      <Label fx:id="setToppingLabel9" layoutX="413.0" layoutY="333.0" text="topping9" />
+      <Label fx:id="setToppingLabel10" layoutX="413.0" layoutY="369.0" text="topping10" />
+      <Label fx:id="setToppingLabel11" layoutX="413.0" layoutY="405.0" text="topping11" />
+      <Label fx:id="setToppingLabel12" layoutX="413.0" layoutY="442.0" text="topping12" />
+      <Button layoutX="53.0" layoutY="487.0" mnemonicParsing="false" onAction="#goToMenuManager7" text="Add/ Remove Toppings from Menu" />
+      <Text layoutX="15.0" layoutY="747.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIST CORRECT? ADD ALL PIZZAS ON LIST TO ORDER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="459.0" layoutY="651.0" mnemonicParsing="false" onAction="#addPizzaToList" text="Add Pizza to List" />
+      <TextArea fx:id="errorBox3" layoutX="585.0" layoutY="668.0" prefHeight="41.0" prefWidth="200.0" />
+      <Text layoutX="15.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRESS BUTTON AGAIN TO ADD SAME PIZZA AGAIN">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
