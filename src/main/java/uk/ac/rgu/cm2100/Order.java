@@ -177,10 +177,7 @@ public class Order implements IOrder {
 	    }
     }
 
-    @Override
-    public int compareTo(IMenuItem o) {
-        return 0;
-    }
+    
 }
 
 
