@@ -4,7 +4,7 @@
 */
 package uk.ac.rgu.cm2100;
 
-public interface IOrder extends Comparable <IMenuItem> {
+public interface IOrder {
     
     public void addItem(IMenuItem item);
     
@@ -18,3 +18,4 @@ public interface IOrder extends Comparable <IMenuItem> {
     
     public void sortByPrice();
 }
+
