@@ -15,12 +15,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller_1_WelcomePane extends Model implements Initializable {
+public class Controller_1_WelcomePane extends Model {
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Empty
-    }
+    
 
     //Switch to Create Order AnchorPane
     public void goToCreateOrder2(ActionEvent event) throws IOException {
